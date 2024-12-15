@@ -15,5 +15,8 @@ Please see [documentation for usage](http://docs.mattermost.com/install/docker-l
 If you have Docker already set up, you can run this image in one line:
 
 ```
-docker run --name mattermost-preview -d --publish 8065:8065 --add-host dockerhost:127.0.0.1 mattermost/mattermost-preview
+5) The preview image is using "postgres:12" in the Dockerfile, this has known issues and should be updated to be "postgres:12-bullseye"
+   a) I created a custom fork, fixed the Dockerfile, cloned it locally and built the image, and then ran the container.
+      i) docker build --tag 'mattermost_preview' .
+      ii) docker run --detach --name mattermost-preview -d --publish 8065:8065 --add-host dockerhost:127.0.0.1 'mattermost-preview'
 ```
