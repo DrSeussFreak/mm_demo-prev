@@ -1,4 +1,4 @@
-# Mattermost Docker Preview Image
+## Don't use this, it's customized for me
 
 This is a Docker image to install Mattermost in *Preview Mode* for exploring product functionality on a single machine using Docker.
 
